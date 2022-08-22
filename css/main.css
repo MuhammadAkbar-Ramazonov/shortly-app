@@ -416,7 +416,7 @@ a {
   background-color: #FFFFFF;
 }
 
-.header-part {
+.header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,8 +428,8 @@ a {
           justify-content: space-between;
 }
 
-.header-part__nav-btn {
-  background-image: url("../images/hamburger.svg");
+.header-wrapper__nav-btn {
+  background-image: url("../images/hamburger-icon.svg");
   background-repeat: no-repeat;
   width: 24px;
   height: 21px;
@@ -437,7 +437,7 @@ a {
   background-color: transparent;
 }
 
-.header-part__links-box {
+.header-wrapper__links-box {
   position: fixed;
   top: 96px;
   left: 0;
@@ -451,35 +451,10 @@ a {
   padding: 40px 24px;
   background-color: var(--main-text-color-2);
   border-radius: 10px;
-  -webkit-animation: show 0.3s;
-          animation: show 0.3s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
 }
 
-.button {
-  width: 24px;
-  height: 21px;
-  background-image: url("../images/hamburger.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: 0;
-}
-
-.button--active {
+.header-wrapper__links-box-on {
   display: block;
-}
-
-.show-block {
-  display: block;
-}
-
-.header-part__links-box-on {
-  display: block;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 .site-nav {
@@ -542,7 +517,7 @@ a {
 }
 
 @media only screen and (min-width: 450px) {
-  .header-part__links-box {
+  .header-wrapper__links-box {
     max-width: 380px;
   }
   .login-link-box__signup {
@@ -553,15 +528,15 @@ a {
   #site-header {
     padding: 55px 0 30px;
   }
-  .header-part {
+  .header-wrapper {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .header-part__nav-btn {
+  .header-wrapper__nav-btn {
     display: none;
   }
-  .header-part__links-box {
+  .header-wrapper__links-box {
     position: static;
     top: 0;
     width: 100%;
@@ -626,7 +601,7 @@ a {
 }
 /* Header Finish */
 /* Hero Start */
-#hero {
+.hero {
   padding: 40px 0 168px 0;
   background-image: url("../images/hero-bg-img-mobile.jpg");
   background-repeat: no-repeat;
@@ -828,7 +803,7 @@ a {
 }
 /* Hero Finish */
 /* Form Start */
-#form {
+.form {
   position: relative;
 }
 
@@ -938,6 +913,7 @@ a {
 }
 
 .form-part__btn {
+  width: 100%;
   margin-top: 38px;
   padding: 11px 63px;
   font-weight: 700;
@@ -1028,7 +1004,7 @@ a {
 }
 /* Form Finish */
 /* Statistics Start */
-#statistics {
+.statistics {
   padding-top: 160px;
 }
 
@@ -1180,7 +1156,7 @@ a {
 }
 /* Statistics Finish */
 /* Boost Start */
-#boost {
+.boost {
   margin-top: 80px;
   background-image: url("../images/boost-bg-img.svg");
   background-repeat: no-repeat;
@@ -1232,7 +1208,7 @@ a {
 }
 /* Boost Finish */
 /* Footer Start */
-#site-footer {
+.site-footer {
   padding: 54px 0 56px 0;
   background-color: #232127;
 }

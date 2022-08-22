@@ -1,9 +1,6 @@
-var elOpenMenu = document.querySelector(".button");
-var elOpenList = document.querySelector(".sitenav");
-var elOpenlinks = document.querySelector(".site-header__links");
+let headerPartBox = document.querySelector(".header-part__links-box")
+let openNavBtn = document.querySelector(".header-part__nav-btn")
 
-elOpenMenu.addEventListener("click", function(){
-    elOpenList.classList.toggle("show-block");
-    elOpenMenu.classList.toggle("button--active");
-    elOpenlinks.classList.toggle("show-block");
-});
+openNavBtn.addEventListener("click", function() {
+    headerPartBox.classList.toggle("header-part__links-box-on")
+})

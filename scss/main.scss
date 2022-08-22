@@ -469,14 +469,14 @@ a {
   background-color: #FFFFFF;
 }
 
-.header-part {
+.header-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-part__nav-btn {
-  background-image: url("../images/hamburger.svg");
+.header-wrapper__nav-btn {
+  background-image: url("../images/hamburger-icon.svg");
   background-repeat: no-repeat;
   width: 24px;
   height: 21px;
@@ -484,7 +484,7 @@ a {
   background-color: transparent;
 }
 
-.header-part__links-box {
+.header-wrapper__links-box {
   position: fixed;
   top: 96px;
   left: 0;
@@ -498,166 +498,148 @@ a {
   padding: 40px 24px;
   background-color: var(--main-text-color-2);
   border-radius: 10px;
-  animation: show 0.3s;
-  animation-direction: alternate;
-  transform: translateX(-200%);
 }
 
-.button {
-  width: 24px;
-  height: 21px;
-  background-image: url("../images/hamburger.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: 0;
-}
-.button--active {
+
+.header-wrapper__links-box-on {
   display: block;
-}
-.show-block{
-  display: block;
-}
-
-
-.header-part__links-box-on {
-    display: block;
-    transform: translateX(0%);
 }
 
 .site-nav {
-    border-bottom: 1px solid var(--main-text-color-4);
+  border-bottom: 1px solid var(--main-text-color-4);
 }
 
 .site-nav__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .site-nav__item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .site-nav__link,
 .login-links {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
-    color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
 }
 
 .site-nav__link:hover {
-    color: #ffff;
+  color: #ffff;
 }
 
 .login-link-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login-link-box__login {
-    margin: 32px 0 24px;
+  margin: 32px 0 24px;
 }
 
 .login-link-box__signup {
-    padding: 11px 80px;
-    background-color: var(--main-text-color-6);
-    border-radius: 28px;
+  padding: 11px 80px;
+  background-color: var(--main-text-color-6);
+  border-radius: 28px;
 }
 
 @media only screen and (min-width:450px) {
-    .header-part__links-box {
-        max-width: 380px;
-    }
+  .header-wrapper__links-box {
+      max-width: 380px;
+  }
 
-    .login-link-box__signup {
-        padding: 11px 105px;
-    }
+  .login-link-box__signup {
+      padding: 11px 105px;
+  }
 }
 
 @media only screen and (min-width:800px) {
-    #site-header {
-        padding: 55px 0 30px;
-    }
+  #site-header {
+      padding: 55px 0 30px;
+  }
 
-    .header-part {
-        justify-content: flex-start;
-    }
+  .header-wrapper {
+      justify-content: flex-start;
+  }
 
-    .header-part__nav-btn {
-        display: none;
-    }
+  .header-wrapper__nav-btn {
+      display: none;
+  }
 
-    .header-part__links-box {
-        position: static;
-        top: 0;
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        border-radius: 0;
-    }
+  .header-wrapper__links-box {
+      position: static;
+      top: 0;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+  }
 
-    .site-nav {
-        border-bottom: none;
-    }
+  .site-nav {
+      border-bottom: none;
+  }
 
-    .site-nav__list {
-        flex-direction: row;
-        margin-left: 45px;
-    }
+  .site-nav__list {
+      flex-direction: row;
+      margin-left: 45px;
+  }
 
-    .site-nav__item {
-        margin-bottom: 0;
-    }
+  .site-nav__item {
+      margin-bottom: 0;
+  }
 
-    .site-nav__item:not(:last-child) {
-        margin-right: 29px;
-    }
+  .site-nav__item:not(:last-child) {
+      margin-right: 29px;
+  }
 
-    .site-nav__link,
-    .login-links {
-        color: var(--main-text-color-4);
-    }
+  .site-nav__link,
+  .login-links {
+      color: var(--main-text-color-4);
+  }
 
-    .login-link-box {
-        flex-direction: row;
-        width: 204px;
-        margin-left: auto;
-    }
+  .login-link-box {
+      flex-direction: row;
+      width: 204px;
+      margin-left: auto;
+  }
 
-    .login-link-box__login {
-        margin: 0 37px 0 0;
-    }
+  .login-link-box__login {
+      margin: 0 37px 0 0;
+  }
 
-    .login-link-box__signup {
-        padding: 9px 23px;
-        color: #FFFFFF;
-        background-color: var(--main-text-color-6);
-        border-radius: 28px;
-    }
+  .login-link-box__signup {
+      padding: 9px 23px;
+      color: #FFFFFF;
+      background-color: var(--main-text-color-6);
+      border-radius: 28px;
+  }
 
-    .site-nav__link:hover,
-    .login-links:hover {
-        color: var(--main-text-color-1);
-    }
+  .site-nav__link:hover,
+  .login-links:hover {
+      color: var(--main-text-color-1);
+  }
 
-    .login-link-box__signup:hover,
-    .hero-part__link:hover {
-        background-color: #9AE3E3;
-        color: #FFFFFF;
-    }
+  .login-link-box__signup:hover,
+  .hero-part__link:hover {
+      background-color: #9AE3E3;
+      color: #FFFFFF;
+  }
 }
+
 /* Header Finish */
 
 /* Hero Start */
 
-#hero {
+.hero {
   padding: 40px 0 168px 0;
   background-image: url("../images/hero-bg-img-mobile.jpg");
   background-repeat: no-repeat;
@@ -877,7 +859,7 @@ a {
 
 /* Form Start */
 
-#form {
+.form {
   position: relative;
 }
 
@@ -951,6 +933,7 @@ a {
 }
 
 .form-part__btn {
+  width: 100%;
   margin-top: 38px;
   padding: 11px 63px;
   font-weight: 700;
@@ -1045,7 +1028,7 @@ a {
 
 /* Statistics Start */
 
-#statistics {
+.statistics {
   padding-top: 160px;
 }
 
@@ -1205,7 +1188,7 @@ a {
 
 /* Boost Start */
 
-#boost {
+.boost {
   margin-top: 80px;
   background-image: url("../images/boost-bg-img.svg");
   background-repeat: no-repeat;
@@ -1256,7 +1239,7 @@ a {
 
 /* Footer Start */
 
-#site-footer {
+.site-footer {
   padding: 54px 0 56px 0;
   background-color: #232127;
 }
