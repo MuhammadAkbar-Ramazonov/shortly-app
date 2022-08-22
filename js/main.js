@@ -1,6 +1,6 @@
-let headerPartBox = document.querySelector(".header-part__links-box")
-let openNavBtn = document.querySelector(".header-part__nav-btn")
+let headerPartBox = document.querySelector(".header-wrapper__links-box")
+let openNavBtn = document.querySelector(".header-wrapper__nav-btn")
 
 openNavBtn.addEventListener("click", function() {
-    headerPartBox.classList.toggle("header-part__links-box-on")
+    headerPartBox.classList.toggle("header-wrapper__links-box-on")
 })
